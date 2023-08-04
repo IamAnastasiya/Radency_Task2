@@ -4,10 +4,7 @@ import classes from './NoteItem.module.css';
 import { useDispatch } from 'react-redux';
 import  { noteActions }  from '../../store/notes-slice';
 import  { modalActions }  from '../../store/modal-slice';
-
-
-const capitalize = (str: string) => str.replace(/(^\w|\s\w)/g, m => m.toUpperCase());
-const formatCategoryName = (str: string) => capitalize(str.includes('-') ? str.replace(/-/g, ' ') : str);
+import { capitalize, formatCategoryName } from '../../helpers/helpers';
 
 
 const NoteItem: React.FC<{ note: Note; tableMode: string }> = (props) => {   

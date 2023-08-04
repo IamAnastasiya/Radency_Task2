@@ -5,20 +5,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import  { RootState }  from '../../store/index';
 import  { noteActions }  from '../../store/notes-slice';
 import  { modalActions }  from '../../store/modal-slice';
-
-const getCurrentDate = () => {                                                
-    const currentDate = new Date();
-    const day = currentDate.getDate();
-    const month = currentDate.getMonth() + 1;
-    const year = currentDate.getFullYear();
-    return `${day}/${month}/${year}`;
-}
-
-const extractDates = (str: string) => {                                                    
-    const dateRegex = /\b\d{1,2}\/\d{1,2}\/\d{4}\b/g;
-    const datesFound = Array.from(str.matchAll(dateRegex)).map(match => match[0]);
-    return datesFound.join(', ') || '';
-}
+import { getCurrentDate, extractDates } from '../../helpers/helpers';
 
 const NoteForm = () => {
 

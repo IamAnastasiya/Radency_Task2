@@ -1,7 +1,5 @@
 import classes from './SummaryItem.module.css';
-
-const capitalize = (str: string) => str.replace(/(^\w|\s\w)/g, m => m.toUpperCase());
-const formatCategoryName = (str: string) => capitalize(str.includes('-') ? str.replace(/-/g, ' ') : str);
+import { formatCategoryName } from '../../helpers/helpers';
 
 
 const SummaryItem: React.FC<{ category: string; counts: {[key: string]: number}}> = (props) => {   
