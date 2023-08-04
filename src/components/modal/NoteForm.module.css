@@ -1,0 +1,45 @@
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    padding: 18px;
+}
+
+.modal-content > input,
+.modal-content > label {
+    margin-bottom: 8px;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.select {
+    font-size: 19px;
+}
+
+
+.modal-actions {
+    padding: 20px 0 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modal-button {
+    padding: 0.5rem 1.5rem;
+    border: 1px solid #65a7f3;
+    background: #65a7f3;
+    color: white;
+    border-radius: 6px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.26);
+    cursor: pointer;
+}
+
+
+.modal-button:first-of-type {
+    margin-right: 20px;
+}
+
+.modal-button:hover {
+    background: #1a6bf9;
+    border-color: #1a6bf9;
+}
+
+  

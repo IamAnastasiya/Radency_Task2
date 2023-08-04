@@ -1,0 +1,30 @@
+.summary-item-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 6fr 3fr 4fr;
+    grid-column-gap: 3px;
+    padding: 8px 12px;
+    font-weight: 400;
+    background-color: rgba(232,234,245,255);
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.summary-category-name {
+    font-weight: 600;
+}
+
+.summary-task-icon {
+    background-color: rgba(97,97,97,255);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+}
+
+.summary-task-icon > img {
+    filter: invert(100%);
+}
+
+.summary-item-wrapper > span {
+    color: rgb(88, 88, 88);
+}

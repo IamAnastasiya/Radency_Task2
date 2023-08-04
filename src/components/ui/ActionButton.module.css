@@ -1,0 +1,6 @@
+.task-action {
+    border: none;
+    background-color: transparent;
+    filter: invert(50%);
+    cursor: pointer;
+}

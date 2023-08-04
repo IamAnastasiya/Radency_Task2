@@ -1,0 +1,34 @@
+.task-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 5fr repeat(2, 4fr) repeat(2, 5fr) repeat(3, 1fr);
+    grid-column-gap: 3px;
+    padding: 8px 12px;
+    font-weight: 400;
+    background-color: rgba(232,234,245,255);
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+
+.task-wrapper > span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: rgb(88, 88, 88);
+}
+
+.task-icon {
+    background-color: rgba(97,97,97,255);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+}
+
+.task-icon > img {
+    filter: invert(100%);
+}
+
+.task-name {
+    font-weight: 600;
+}

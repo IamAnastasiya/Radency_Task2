@@ -1,0 +1,55 @@
+.tasks-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.tasks-header {
+    display: grid;
+    grid-template-columns: 2fr 5fr repeat(2, 4fr) repeat(2, 5fr) repeat(3, 1fr);
+    grid-template-areas: "icon-header . . . . . edit-header . ."; 
+    grid-column-gap: 3px;
+    padding: 8px 15px;
+    margin-bottom: 10px;
+    background-color: rgba(153,153,153,255);
+    color: white;
+    font-weight: 600;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.tasks-header > img {
+    filter: invert(100%);
+    margin: auto;
+}
+
+.icon-header { 
+    grid-area: icon-header; 
+}
+
+.edit-header { 
+    grid-area: edit-header; 
+}
+
+
+.notes-list {
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.summary-header {
+    display: grid;
+    grid-template-columns: 1fr 6fr 3fr 4fr;
+    grid-template-areas: "icon-header . . ."; 
+    grid-column-gap: 3px;
+    padding: 8px 15px;
+    background-color: rgba(153,153,153,255);
+    color: white;
+    font-weight: 600;
+    align-items: center;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
