@@ -9,12 +9,16 @@ import ModalContainer from "./components/modal/ModalContainer";
 
 function App() {
     const [isArchiveVisible, setIsArchiveVisible] = useState(false);
+    const shoudGetCategoryCounts = useRef(true); // to prevent duplicated useEffect running for the initial render
 
     const dispatch = useDispatch();
     const archiveBtnText = isArchiveVisible ? "Hide Archive" : "Show Archive";
 
     useEffect(() => {
-        dispatch(noteActions.getCategoryCounts());
+        if (shoudGetCategoryCounts.current) {
+            shoudGetCategoryCounts.current = false;
+            dispatch(noteActions.getCategoryCounts());
+        }
     }, []);
 
     const openModalHandler = () => {
